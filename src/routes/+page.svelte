@@ -1,5 +1,6 @@
 <script>
 	// @ts-nocheck
+	import { onMount } from 'svelte';
 
 	import { nouns } from '../nouns';
 	import { adjectives } from '../adjectives';
@@ -10,6 +11,7 @@
 	let adjectivesPos;
 	let verbsPos;
 	let whenOrWherePos;
+	let mounted = false;
 
 	function getRandomInt(max) {
 		return Math.floor(Math.random() * max);
@@ -21,31 +23,30 @@
 		verbsPos = getRandomInt(verbs.length - 1);
 		whenOrWherePos = getRandomInt(whenOrWhere.length - 1);
 	}
-
-	console.log('nouns', nouns.length);
-	console.log('adjectives', adjectives.length);
-	console.log('verbs', verbs.length);
-	console.log('whenOrWhere', whenOrWhere.length);
-
-	randomize();
+	onMount(() => {
+		randomize();
+		mounted = true;
+	});
 </script>
 
 <section>
-	<div>
-		<h1>Slumpord till skrivövningar</h1>
-		<p>{nouns[nounsPos]}</p>
+	{#if mounted}
+		<div>
+			<h1>Slumpord till skrivövningar</h1>
+			<p>{nouns[nounsPos]}</p>
 
-		<p>{adjectives[adjectivesPos]}</p>
+			<p>{adjectives[adjectivesPos]}</p>
 
-		<p>{verbs[verbsPos]}</p>
+			<p>{verbs[verbsPos]}</p>
 
-		<p>{whenOrWhere[whenOrWherePos]}</p>
+			<p>{whenOrWhere[whenOrWherePos]}</p>
 
-		<p>
-			<button on:click={randomize}>Nya ord, tack!</button>
-		</p>
-	</div>
-	<footer>
-		Slumpordsapp för skrivövningar av <a href="https://helenas.dagar.se">Helena Ferry</a>.
-	</footer>
+			<p>
+				<button on:click={randomize}>Nya ord, tack!</button>
+			</p>
+		</div>
+		<footer>
+			Slumpordsapp för skrivövningar av <a href="https://helenas.dagar.se">Helena Ferry</a>.
+		</footer>
+	{/if}
 </section>
