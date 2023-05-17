@@ -22,20 +22,30 @@
 		whenOrWherePos = getRandomInt(whenOrWhere.length - 1);
 	}
 
+	console.log('nouns', nouns.length);
+	console.log('adjectives', adjectives.length);
+	console.log('verbs', verbs.length);
+	console.log('whenOrWhere', whenOrWhere.length);
+
 	randomize();
 </script>
 
 <section>
-	<h1>Slumpord till skrivövningar</h1>
-	<p>{nouns[nounsPos]}</p>
+	<div>
+		<h1>Slumpord till skrivövningar</h1>
+		<p>{nouns[nounsPos]}</p>
 
-	<p>{adjectives[adjectivesPos]}</p>
+		<p>{adjectives[adjectivesPos]}</p>
 
-	<p>{verbs[verbsPos]}</p>
+		<p>{verbs[verbsPos]}</p>
 
-	<p>{whenOrWhere[whenOrWherePos]}</p>
+		<p>{whenOrWhere[whenOrWherePos]}</p>
 
-	<p>
-		<button on:click={randomize}>Nya ord, tack!</button>
-	</p>
+		<p>
+			<button on:click={randomize}>Nya ord, tack!</button>
+		</p>
+	</div>
+	<footer>
+		Slumpordsapp för skrivövningar av <a href="https://helenas.dagar.se">Helena Ferry</a>.
+	</footer>
 </section>
