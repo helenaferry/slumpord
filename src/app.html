@@ -1,12 +1,29 @@
 <!DOCTYPE html>
+<style>
+	body {
+		max-width: 500px;
+		margin: auto;
+		font-family: verdana;
+		background-color: aliceblue;
+	}
+
+	section {
+		background-color: white;
+		padding: 50px;
+		height: 100vh;
+	}
+</style>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
-		<meta name="viewport" content="width=device-width" />
-		%sveltekit.head%
-	</head>
-	<body data-sveltekit-preload-data="hover">
-		<div style="display: contents">%sveltekit.body%</div>
-	</body>
+
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" href="%sveltekit.assets%/favicon.png" />
+	<meta name="viewport" content="width=device-width" />
+	%sveltekit.head%
+</head>
+
+<body data-sveltekit-preload-data="hover">
+	<div style="display: contents">%sveltekit.body%</div>
+</body>
+
 </html>
