@@ -105,5 +105,7 @@ export const adjectives = [
     'vintrig',
     'höstig',
     'vårig',
-    'flitig'
+    'flitig',
+    'rekorderlig',
+    'rar'
 ];

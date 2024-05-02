@@ -107,5 +107,8 @@ export const nouns = [
     'galge',
     'fängelse',
     'silver',
-    'tiara'
+    'tiara',
+    'portmonnä',
+    'påtår',
+    'papiljotter'
 ];

@@ -102,5 +102,7 @@ export const whenOrWhere = [
     'på köplats 59',
     'i telefonkö',
     'i terapisoffan',
-    'på en öde ö'
+    'på en öde ö',
+    'på syjuntan',
+    'på kafferepet'
 ];

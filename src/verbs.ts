@@ -120,5 +120,7 @@ export const verbs = [
     'klaga',
     'ansöka',
     'stapla',
-    'fiska'
+    'fiska',
+    'virka',
+    'älta'
 ];
